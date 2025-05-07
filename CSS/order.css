@@ -1,0 +1,480 @@
+
+/*--------------- Date And Time----------------*/
+
+#datetime{
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#f80808;
+    color: aliceblue;
+    text-align: left;
+    margin-top: -100px;
+    padding: 10px;
+    margin-left: -8px;
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.20);
+    z-index: 1000;
+    
+}
+
+body{
+    background-color:#cfcfcf;
+
+}
+
+#container{
+    background-color:#cfcfcf;
+    height: auto;
+    margin-top: 100px;
+}
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    margin-left: -3px;
+    
+
+}
+
+#header{
+    height: 80px;
+    background-color:#FEFEFE;
+    margin-left: -4px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 120PX;
+       
+    }
+    
+}
+
+
+#header h1{
+    text-align: center;
+    padding: 20px;                                        
+    margin-top: -60px;
+    margin-left: auto;
+    font-size: 40px;
+
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #header h1{
+        font-size: 40px;
+        margin-left: -10px;
+       
+    }
+    
+}
+
+
+
+
+
+/*----------------------- Manu--------------------------------------------*/
+
+
+#manu {
+    margin-bottom: 20px;
+    height: auto;
+    background-color:#cfcfcf;
+     padding: 1px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #manu {
+        display: none;
+    }
+}
+
+#manu a:hover {
+    color: black;
+    border-radius: 5px;
+}
+
+#manu ul {
+    text-align: center;
+
+
+}
+
+#manu ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+
+
+#manu ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#manu ul li a:hover{
+    color: #f80808;
+}
+
+.fa-angles-left {
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    transition: (1.1);
+}
+
+
+
+
+.fa-angles-left:hover {
+    color: #FEFEFE;
+    background-color: white;
+
+}
+
+.fa-angles-right {
+     box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    transition: (1.1);
+}
+
+.fa-angles-right:hover {
+    color: #FEFEFE;
+    background-color: white;
+
+}
+
+
+
+.billing.css{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cfcfcf;
+    padding: 25px;
+
+}
+
+/*.............................................navbar..........................................*/
+
+.nav-btn .fa-solid {
+    color: #f80808;
+    background-color: #cfcfcf;
+    width: 100%;
+    position: fixed;
+    top: 25%;
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 30px;
+    transition: 0.8s ;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn .fa-solid{
+        display: none;
+      
+    }
+
+}
+
+
+.nav-btn .fa-solid:hover{
+    transform: matrix(0.8s);
+    
+
+
+}
+.navbar{
+    background: linear-gradient(rgb(83, 83, 83),rgb(122, 0, 0)),
+    center/cover no-repeat fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: translatex(-120%);
+    transition: 0.8s;
+    z-index: 3000;
+    position: fixed;
+    
+
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display:none;
+
+}
+#nav-check{
+    display: none;
+}
+
+#nav-check:checked ~ .navbar {
+    transform: translateX(0);
+
+}
+#nav-check:checked ~ .overlay {
+    display: block;
+}
+ 
+.navbar h3{
+    padding: 1rem;
+    color: rgb(223, 189, 189);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 3rem;
+    
+}
+
+.navbar-header {
+    position: relative;
+}
+.nav-close{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background-color: #f80808;
+   
+
+}
+
+.nav-close .fa-xmark{
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    font-size: 40px;
+}
+.nav-close .fa-xmark:hover{
+    color: #FEFEFE;
+    transition: all 0.3s linear;
+}
+
+.navbar li{
+    list-style: none;
+    z-index: 2000;
+
+}
+
+.nav-link{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s linear;
+}
+.nav-link:hover{
+    background-color: #f80808;
+    padding-left: 1.5rem;
+    border-left: 1rem solid #FEFEFE;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 40%;
+        min-width: 20rem;
+    }
+    
+}
+
+
+/*.........................................container form..............................................*/
+
+.container1 form{
+    margin-top: 100px;
+    width: 700px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+form .rows{
+    display: flex;
+    gap:50px;
+    flex: warp;
+
+}
+
+@media screen and (max-width: 768px) {
+    form .rows{
+        flex-direction: column;
+    }
+    
+}
+
+.rows .column{
+    flex: 1 1 250px;
+
+}
+
+.column .input-box{
+    margin: 15px 0;
+    
+}
+.input-box span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.column .flex{
+    display: flex;
+    gap: 50px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+
+.reset{
+    padding: 15px 100px;
+    width: 100px;
+    border-radius: 4px;
+    margin-left: 20px;
+    background-color:rgb(248, 61, 61) ;
+}
+
+@media screen and (max-width: 768px) {
+    .reset{
+        padding: 15px 200px;
+    }
+    
+}
+
+
+
+.reset:hover{
+    cursor: pointer;
+    background-color: #bb0404;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 200px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    button{
+        margin-bottom: 15px;
+    }
+    
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.error {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ----------------------- WhatsApp icon-------------------------- */
+.whatsapp-icon {
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #25d366; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.60);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.60);
+}
+
+
+/*-------------------------------footer---------------------------*/
+
+
+#footer{
+
+    background-color:#f80808 ;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

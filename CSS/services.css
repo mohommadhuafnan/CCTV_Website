@@ -1,0 +1,519 @@
+/*--------------- Date And Time & header------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#datetime{
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#f80808;
+    color: aliceblue;
+    text-align: left;
+    margin-top: -100px;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    
+}
+
+body{
+    background-color:#cfcfcf;
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    body{
+        width: 98%;
+        min-width: 20rem;
+        margin-left: 2px;
+        
+       
+    }
+    
+}
+
+#container{
+    background-color:#cfcfcf;
+    height: auto;
+    margin-top: 100px;
+    
+}
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    margin-top: 29px;
+
+}
+
+
+
+
+
+#header{
+    height: 80px;
+    background-color:#FEFEFE;
+   
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 120PX;
+       
+    }
+    
+}
+
+
+
+#header h1{
+    text-align: center;
+    padding: 20px;                                        
+    margin-top: -90px;
+    margin-left: auto;
+    font-size: 40px;
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #header h1{
+        font-size: 40px;
+        margin-left: -10px;
+       
+    }
+    
+}
+
+
+
+/*----------------------------- Manu------------------------------------*/
+
+#manu {
+    margin-bottom: 20px;
+    height: auto;
+    background-color:#cfcfcf;
+    padding: 1px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #manu {
+      
+        display: none;
+
+    }
+
+}
+
+#manu ul{
+    padding: 10px;
+    text-align: center;
+
+    
+}
+#manu ul li{
+    display: inline;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #manu ul li {
+        margin-right: 8px;
+        display: none;
+
+    }
+
+}
+
+#manu ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+
+#manu a:hover {
+    border-radius: 5px; 
+}
+
+#manu ul li a:hover{
+    color: red;
+}
+
+
+#manu .service{
+    background-color: #f80808;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+   
+    
+}
+
+@media screen and (max-width: 768px) {
+    #manu ul li{
+        margin-right: 8px;
+       
+    }
+    
+}
+
+       
+.service{
+    margin-top:100px;
+     
+}   
+
+.fa-angles-left{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-left:hover{
+    color: red;
+    background-color: white;
+
+}
+.fa-angles-right{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-right:hover{
+    color: red;
+    background-color: white;
+
+}
+
+@media screen and (max-width: 768px) {
+    .fa-angles-left{
+        display: none;
+      
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fa-angles-right{
+        display: none;
+      
+    }
+}
+
+
+
+/*..................navbar....................*/
+
+.nav-btn .fa-solid {
+    color: #f80808;
+    position: fixed;
+    top: 25%;
+    background-color: #cfcfcf;
+    width: 100%;
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 30px;
+    transition: 0.8s ;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn .fa-solid{
+        display: none;
+      
+    }
+
+}
+
+
+.nav-btn .fa-solid:hover{
+    transform: matrix(0.8s);
+    
+
+
+}
+.navbar{
+    background: linear-gradient(rgb(83, 83, 83),rgb(122, 0, 0)),
+    center/cover no-repeat fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: translatex(-120%);
+    transition: 0.8s;
+    z-index: 3000;
+    position: fixed;
+    
+
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display:none;
+
+}
+#nav-check{
+    display: none;
+}
+
+#nav-check:checked ~ .navbar {
+    transform: translateX(0);
+
+}
+#nav-check:checked ~ .overlay {
+    display: block;
+}
+ 
+.navbar h3{
+    padding: 1rem;
+    color: rgb(223, 189, 189);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 3rem;
+    
+}
+
+.navbar-header {
+    position: relative;
+}
+.nav-close{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background-color: #f80808;
+   
+
+}
+
+.nav-close .fa-xmark{
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    font-size: 40px;
+}
+.nav-close .fa-xmark:hover{
+    color: #FEFEFE;
+    transition: all 0.3s linear;
+}
+
+.navbar li{
+    list-style: none;
+    z-index: 2000;
+
+}
+
+.nav-link{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s linear;
+}
+.nav-link:hover{
+    background-color: #f80808;
+    padding-left: 1.5rem;
+    border-left: 1rem solid #FEFEFE;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 40%;
+        min-width: 20rem;
+    }
+    
+}
+
+
+/*----------------------------- our sarvices------------------------------------*/
+
+.our-service{
+    text-indent: 3%;
+    height: auto;
+    width: 92%;
+    background-color: #FEFEFE;
+    margin-top: 1px;
+    margin-left: 3.7%;
+    border-radius: 7px;
+    margin-bottom: 2%;
+    font-size: 14pt;
+    padding: 15px;
+    padding-top: 0px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.50);
+    font-family: Calibri;
+    float: left;
+}
+
+
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.about-picture-container img{
+    width: 470px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 3%;
+    float: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.50);
+    object-position: center;
+    transition: 0.3s;
+
+}
+
+@media screen and (max-width: 768px) {
+    #header img {
+        width: 200px;
+        height: 200px;
+        margin-top: -50px;
+       
+    }
+    
+}
+
+.about-picture-container img:hover{
+    transform: scale(1.1);
+   
+} 
+
+
+.our-service h2 {
+   margin-bottom: -25px;  
+}
+h2:hover{
+    color: #f80808;
+}
+a:hover{
+    color: #f80808;
+}
+.about-text a{
+    background-color: #f80808;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    border-radius: 10px;
+  
+}
+
+.about-text a:hover{
+    transform: scale(1.1);
+    opacity: 0.5;
+    color: black;
+}
+.about-info  h2 {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 10px;
+
+}
+
+/* ----------------------- WhatsApp icon-------------------------- */
+.whatsapp-icon {
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #25d366; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.60);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.60);
+}
+
+
+
+ 
+
+
+
+
+
+/*----------------------------- footer------------------------------------*/
+
+
+#footer{
+
+    background-color:#f80808 ;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}

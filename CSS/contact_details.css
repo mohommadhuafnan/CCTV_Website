@@ -1,0 +1,530 @@
+/*---------------------------- Date And Time----------------------*/
+
+#datetime{
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#f80808;
+    color: aliceblue;
+    text-align: left;
+    margin-top: -100px;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.20);
+    z-index: 1000;
+    
+}
+
+body{
+    background-color:#cfcfcf;
+
+}
+
+
+#container{
+    background-color:#cfcfcf;
+    height: auto;
+    margin-top: 100px;
+}
+
+
+
+
+#header{
+    margin-top: -60px;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background-color:#FEFEFE;
+    z-index: 1000;
+   
+    
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 120PX;
+       
+    }
+    
+}
+
+#header h1{
+    text-align: center;
+    padding: 20px;                                        
+    margin-top: -5px;
+    margin-left: auto;
+    font-size: 40px;
+
+
+}
+
+@media screen and (max-width: 1200px) {
+    #header h1{
+        font-size: 40px;
+        margin-left: -10px;
+       
+    }
+    
+}
+
+/*----------------------- Manu--------------------------------------------*/
+
+
+#manu {
+    padding: 8px;
+    margin-top: 20px;
+    width: 100%;
+    background-color:#cfcfcf ;
+    position: fixed;
+    margin-bottom: 20px;
+    height: auto;
+    z-index: 900;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #manu {
+        display: none;
+    }
+}
+#manu ul{
+    text-align: center;
+
+    
+}
+
+
+#manu ul li{
+    display: inline;
+    margin-right: 30px;
+  
+    
+}
+
+
+
+#manu ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+#manu a:hover {
+    color: #f80808;
+    border-radius: 5px;
+}
+
+.con{
+    background-color: red;
+    color:black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.fa-angles-left{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-left:hover{
+    color: #FEFEFE;
+    background-color: white;
+
+}
+.fa-angles-right{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-right:hover{
+    color: #FEFEFE;
+    background-color: white;
+
+}
+
+
+
+/*..................navbar....................*/
+
+.nav-btn .fa-solid {
+    color: #f80808;
+    position: fixed;
+    background-color: #cfcfcf;
+    width: 100%;
+    top: 25%;
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 30px;
+    transition: 0.8s ;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn .fa-solid{
+        display: none;
+      
+    }
+
+}
+
+
+.nav-btn .fa-solid:hover{
+    transform: matrix(0.8s);
+    
+
+
+}
+.navbar{
+    background: linear-gradient(rgb(83, 83, 83),rgb(122, 0, 0)),
+    center/cover no-repeat fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: translatex(-120%);
+    transition: 0.8s;
+    z-index: 3000;
+    position: fixed;
+    
+
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display:none;
+
+}
+#nav-check{
+    display: none;
+}
+
+#nav-check:checked ~ .navbar {
+    transform: translateX(0);
+
+}
+#nav-check:checked ~ .overlay {
+    display: block;
+}
+ 
+.navbar h3{
+    padding: 1rem;
+    color: rgb(223, 189, 189);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 3rem;
+    
+}
+
+.navbar-header {
+    position: relative;
+}
+.nav-close{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background-color: #f80808;
+   
+
+}
+
+.nav-close .fa-xmark{
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    font-size: 40px;
+}
+.nav-close .fa-xmark:hover{
+    color: #FEFEFE;
+    transition: all 0.3s linear;
+}
+
+.navbar li{
+    list-style: none;
+    z-index: 2000;
+
+}
+
+.nav-link{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s linear;
+}
+.nav-link:hover{
+    background-color: #f80808;
+    padding-left: 1.5rem;
+    border-left: 1rem solid #FEFEFE;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 40%;
+        min-width: 20rem;
+    }
+    
+}
+
+/*----------------------------------whatsapp-------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.whatsapp-icon {
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #25d366; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.60);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.60);
+}
+ 
+
+/*-------------------------------Contect US-------------------------------------*/
+
+
+section {
+    margin: 40px 0;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+h2 {
+    margin-top: 70px;
+    color: #e10404;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+#map iframe {
+    width: 100%;
+    border: 0;
+    height: 400px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+#responseMessage{
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+
+
+
+@keyframes checkAnimation {
+    100% {
+      transform: rotate(380deg);
+      opacity: 1;
+    }
+  } 
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.button-animated {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+.contact_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact_main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+.contact_main .Contact_tag{
+    text-align: center;
+}
+
+ .contact_main .Contact_tag h2{
+    color: #000;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.Contact_tag a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.contact_main .Contact_tag  p{
+    margin: 10px 0;
+}
+
+.Contact_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.Contact_tag i:hover{
+    color: red;
+}
+
+.fa-map-marker{
+    color: #f80808;
+    font-size: 50px;
+   
+}
+
+.fa-phone{
+    color: #f80808;
+    font-size: 70px;
+}
+
+.fa-briefcase{
+    color: #f80808;
+    font-size: 70px;
+}
+
+
+
+
+
+/*-------------------------------footer-------------------------------------*/
+#footer{
+    margin-top: -40px;
+    background-color:#f80808 ;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}

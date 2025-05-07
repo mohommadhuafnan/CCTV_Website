@@ -1,0 +1,500 @@
+/*-------------------------------------------- Date And Time-----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#datetime{
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#f80808;
+    color: aliceblue;
+    text-align: left;
+    margin-top: -100px;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.20);
+    z-index: 1000;
+    
+}
+
+body{
+    background-color:#cfcfcf;
+
+}
+
+
+
+#container{
+    background-color:#cfcfcf;
+    height: auto;
+    margin-top: 100px;
+
+
+}
+
+
+.header{
+    z-index: 2000;
+    position: fixed;
+    z-index: 1000;
+   
+    
+
+}
+
+#header{
+    width: 100%;
+    height: 80px;
+    background-color:#FEFEFE;
+    position: fixed;
+    z-index: 1000;
+    margin-top:-60px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 120PX;
+       
+    }
+    
+}
+
+
+#header h1{
+    text-align: center;
+    padding: 20px;                                        
+    margin-top: -0px;
+    margin-left: auto;
+    font-size: 40px;
+
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #header h1{
+        font-size: 40px;
+        margin-left: -10px;
+       
+    }
+    
+}
+
+
+
+/*-------------------------------------------------- Manu-------------------------------------------------*/    
+
+#manu {
+    margin-top: 20px;
+    width: 100%;
+    background-color:#cfcfcf ;
+    position: fixed;
+    margin-bottom: 20px;
+    height: auto;
+    z-index: 900;
+    padding: 10px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #manu {
+        display: none;
+    }
+}
+
+#manu ul{
+    text-align: center;
+
+    
+}
+
+
+#manu ul li{
+    display: inline;
+    margin-right: 30px;
+  
+    
+}
+
+@media screen and (max-width: 768px) {
+    #manu ul li {
+        display: none;
+
+    }
+
+}
+
+
+#manu ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+#manu a:hover {
+    color: #f80808;
+    border-radius: 5px;
+}
+
+.products_manu{
+    background-color: red;
+    color:black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.fa-angles-left{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-left:hover{
+    color: #FEFEFE;
+    background-color: white;
+
+}
+.fa-angles-right{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.10);
+    transition: (1.1);
+}
+.fa-angles-right:hover{
+    color: #FEFEFE;
+    background-color: white;
+
+}
+@media screen and (max-width: 768px) {
+    .fa-angles-left{
+        display: none;
+      
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fa-angles-right{
+        display: none;
+      
+    }
+}
+
+
+/*..................navbar....................*/
+
+.nav-btn .fa-solid {
+    color: #f80808;
+    position: fixed;
+    background-color: #cfcfcf;
+    width: 100%;
+    top: 25%;
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 30px;
+    transition: 0.8s ;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn .fa-solid{
+        display: none;
+      
+    }
+
+}
+
+
+.nav-btn .fa-solid:hover{
+    transform: matrix(0.8s);
+    
+
+
+}
+.navbar{
+    background: linear-gradient(rgb(83, 83, 83),rgb(122, 0, 0)),
+    center/cover no-repeat fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: translatex(-120%);
+    transition: 0.8s;
+    z-index: 3000;
+    position: fixed;
+    
+
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display:none;
+
+}
+#nav-check{
+    display: none;
+}
+
+#nav-check:checked ~ .navbar {
+    transform: translateX(0);
+
+}
+#nav-check:checked ~ .overlay {
+    display: block;
+}
+ 
+.navbar h3{
+    padding: 1rem;
+    color: rgb(223, 189, 189);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 3rem;
+    
+}
+
+.navbar-header {
+    position: relative;
+}
+.nav-close{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background-color: #f80808;
+   
+
+}
+
+.nav-close .fa-xmark{
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    font-size: 40px;
+}
+.nav-close .fa-xmark:hover{
+    color: #FEFEFE;
+    transition: all 0.3s linear;
+}
+
+.navbar li{
+    list-style: none;
+    z-index: 2000;
+
+}
+
+.nav-link{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s linear;
+}
+.nav-link:hover{
+    background-color: #f80808;
+    padding-left: 1.5rem;
+    border-left: 1rem solid #FEFEFE;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 40%;
+        min-width: 20rem;
+    }
+    
+}
+
+
+
+/*------------------------------------------------ products--------------------------------------------------*/
+
+.products{
+    width: 100%;
+    padding: 70px 0;
+   
+
+}
+
+
+.products .products_image_box{
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 50px;
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+}
+
+
+
+.products .products_image_box .products_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.50);
+    border-radius: 20px;
+  
+}
+
+@media screen and (max-width: 768px) {
+    .products .products_image_box .products_image{
+        width: 90%;
+        margin-left: 30px;
+        
+       
+    }
+    
+}   
+
+
+
+.products .products_image_box .products_image img{
+    width: 100%;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.products .products_image_box .products_image:hover img{
+    opacity: 0.4;
+}
+
+.products .products_image_box .products_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: red;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.products .products_image_box .products_image:hover h3{
+    opacity: 1;
+}
+
+.products .products_image_box .products_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.products .products_image_box .products_image:hover p{
+    opacity: 1;
+}
+
+.products .products_image_box .products_image .products_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+
+.products_btn{
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+.products .products_image_box .products_image:hover .products_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ----------------------- WhatsApp icon-------------------------- */
+.whatsapp-icon {
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #25d366; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.60);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.60);
+}
+
+
+
+/*-------------------------------------------- Footer----------------------------------------------*/  
+
+
+
+#footer{
+
+    background-color:#f80808 ;
+    height: 40px;
+    width: auto;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}
+
